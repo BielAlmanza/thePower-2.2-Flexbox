@@ -1,0 +1,562 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #000;
+  background-color: #fff;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+h1.logo {
+  display: flex;
+  align-items: center;
+}
+h1.logo img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+  text-align: left;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .logo {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+header .logo img {
+  max-width: 100%;
+  height: auto;
+}
+header .menu-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  color: #000;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  z-index: 10;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 0;
+}
+.nav-links li {
+  margin-left: 20px;
+  position: relative;
+}
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #5c1717;
+}
+
+/* Submenú */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  border-radius: 5px;
+}
+.submenu li a,
+.submenu a {
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  transition: background 0.3s ease;
+}
+.nav-links li:hover > .submenu {
+  display: block;
+}
+
+/* Menú Hamburguesa */
+.menu-toggle-checkbox {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-toggle .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Botón */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: #ff6600;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #e65c00;
+}
+
+
+
+/* DEDICADO A SECCIONES DE TODA LA PÁGINA WEB
+INDEX*/
+/* Sección Hero */
+/* Contenedor principal */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url('hero.jpg') no-repeat center center/cover;
+  background-color: #ffffff;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+.contenedor-principal {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  text-decoration: underline;
+}
+.contenedor {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.photography-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;       /* 2 columnas */
+  grid-template-rows: auto auto;       /* 2 filas, alto automático */
+  grid-gap: 1rem;                      /* espacio entre columnas y filas */
+  max-width: auto;                   /* ancho máximo, ajustable */
+  margin: 0 auto;                      /* centrado horizontal */
+  padding: 1rem;                       /* separación interna */
+  border-top: 1px solid black;
+  margin-top: 50px;
+  strong.underline {
+    text-decoration: underline;
+}
+  grid-template-areas:
+    "publicitaria conciertos"
+    "producto     retrato";
+}
+.photography-section.publicitaria {
+  grid-area: publicitaria;
+}
+.photography-section.conciertos {
+  grid-area: conciertos;
+}
+.photography-section.producto {
+  grid-area: producto;
+}
+.photography-section.retrato {
+  grid-area: retrato;
+}
+.photography-section {
+  background-color: #ffffff; 
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.photography-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.photography-section p {
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.texto {
+  padding: 20px;
+  text-align: center;
+}
+
+.texto h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.texto p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Sección About Página*/
+.about-container {
+  display: flex;
+  align-items: center;
+  max-width: auto;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+}
+
+.about-image {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.about-text h2 {
+  margin: 45px;
+  font-size: 21px;
+  color: #000;
+}
+
+.about-text p {
+  margin-top: 10px;
+  margin-left: 45px;
+  font-size: 20px;
+  color: #161616;
+  white-space: pre-line;
+  line-height: 1.4;
+}
+
+
+/* Retrato Book*/
+.book-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.book-image {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.book-text h1 {
+  margin: 25px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+  color: #000;
+}
+
+.book-text p {
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 20px;
+  color: #161616;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; 
+}
+.gallery {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(3, auto); /* 3 filas */
+  gap: 10px; /* Espacio entre imágenes */
+  max-width: 100%;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  aspect-ratio: 1.1,2;
+  max-width: 900px;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-principal {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header {
+      flex-direction: row;
+  }
+
+  .contenedor {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .nav {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      display: none;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .menu-toggle-checkbox:checked + .menu-toggle + .nav-links {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      z-index: 9999;
+      padding-top: 20px;
+  }
+
+  .menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(2) {
+      opacity: 0;
+  }
+  .menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  h1.logo img {
+      width: 50%;
+  }
+
+  /* Estilos generales del menú */
+  .navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    height: 50px;
+    z-index: 12;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    position: relative;
+  }
+
+  /* Ocultar elementos en PC */
+  .navbar input[type="checkbox"],
+  .navbar .hamburger-lines {
+    display: none;
+  }
+
+  /* Estilos del menú en PC */
+  .menu-items {
+    display: flex;
+  }
+
+  .menu-items li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .menu-items a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .menu-items a:hover {
+    color: #117964;
+  }
+
+  /* Estilos para móviles */
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container {
+    display: block;
+    height: 64px;
+  }
+
+  /* Checkbox para controlar el menú */
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    width: 30px;
+    height: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  /* Icono de menú hamburguesa */
+  .navbar-container .hamburger-lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 23px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+  }
+
+  .hamburger-lines .line {
+    width: 100%;
+    height: 4px;
+    background: #333;
+    border-radius: 10px;
+  }
+
+  .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  /* Menú desplegable */
+  .menu-items {
+    flex-direction: column;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in-out;
+    
+  }
+
+  .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  /* Mostrar el menú cuando el checkbox está marcado */
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  /* Animaciones del icono hamburguesa */
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+}
